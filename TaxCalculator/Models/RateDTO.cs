@@ -1,7 +1,7 @@
 ﻿using System;
 namespace TaxCalculator.Models
 {
-    public class RateDTO
+    public class LocationTaxRate
     {
        
         public string city { get; set; }
