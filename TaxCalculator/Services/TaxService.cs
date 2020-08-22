@@ -13,12 +13,12 @@ namespace TaxCalculator.Services
             _taxCalculator = taxCalculator;
         }
 
-        public decimal CalculateTax(TaxOrderDTO order)
+        public double CalculateTax(TaxOrderDTO order)
         {
             return _taxCalculator.CalculateOrderTaxes(order);
         }
 
-        public decimal CalculateTax(string zipCode)
+        public double CalculateTax(string zipCode)
         {
             return _taxCalculator.GetTaxRateByLocation(zipCode);
         }

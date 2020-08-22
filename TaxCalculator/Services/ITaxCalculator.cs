@@ -6,8 +6,8 @@ namespace TaxCalculator.Services
     public interface ITaxCalculator
     {
 
-        decimal GetTaxRateByLocation(string zipCode);
-        decimal CalculateOrderTaxes(TaxOrderDTO order);
+        double GetTaxRateByLocation(string zipCode);
+        double CalculateOrderTaxes(TaxOrderDTO order);
 
     
     }

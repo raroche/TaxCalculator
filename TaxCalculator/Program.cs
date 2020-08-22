@@ -48,7 +48,7 @@ namespace TaxCalculator
 
             LineItemTaxDTO lineItemTaxDTO = new LineItemTaxDTO();
             lineItemTaxDTO.quantity = 1;
-            lineItemTaxDTO.unit_price = (decimal)1.0;
+            lineItemTaxDTO.unit_price = (decimal)15;
             lineItemTaxDTO.product_tax_code = "31000";
 
             testOrder.lineItems = new List<LineItemTaxDTO>();

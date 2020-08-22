@@ -19,7 +19,7 @@ namespace TaxCalculator.Services
         /// </summary>
         /// <param name="order"></param>
         /// <returns> Return taxes amount to be collected</returns>
-        public decimal CalculateOrderTaxes(TaxOrderDTO order)
+        public double CalculateOrderTaxes(TaxOrderDTO order)
         {
 
             try
@@ -40,7 +40,7 @@ namespace TaxCalculator.Services
 
                 if (jResponse["tax"].HasValues)
                 {
-                    return Convert.ToDecimal(jResponse["tax"]["amount_to_collect"]);
+                    return Convert.ToDouble(jResponse["tax"]["amount_to_collect"]);
                 }
 
                 else
@@ -63,7 +63,7 @@ namespace TaxCalculator.Services
         /// </summary>
         /// <param name="zipCode"></param>
         /// <returns> Returns combined_district_rate tax percentage </returns>
-        public decimal GetTaxRateByLocation(string zipCode)
+        public double GetTaxRateByLocation(string zipCode)
         {
 
             try
@@ -85,7 +85,7 @@ namespace TaxCalculator.Services
 
                 if (jResponse["rate"].HasValues)
                 {
-                    return Convert.ToDecimal(jResponse["rate"]["combined_rate"]);
+                    return Convert.ToDouble(jResponse["rate"]["combined_rate"]);
                 }
 
                 else
